@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:name="lucasbaiao.com.br.moviessearch.view.ItemFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root"
+    android:layout_marginLeft="@dimen/medium_padding"
+    android:layout_marginRight="@dimen/medium_padding"
+    tools:context="lucasbaiao.com.br.moviessearch.view.fragment.PopularFragment">
+
+    <include layout="@layout/empty_recycler_view"/>
+
+    <include layout="@layout/progress_layout"/>
+
+    <include layout="@layout/error_layout"/>
+
+</RelativeLayout>

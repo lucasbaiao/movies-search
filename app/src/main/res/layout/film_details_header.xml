@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/header_film_details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:showIn="@layout/content_film_details_activity">
+
+
+    <android.support.v7.widget.AppCompatCheckBox
+        android:id="@+id/favorite_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/text_margin"
+        android:button="@drawable/favorite_selector"
+        android:checked="true"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="end"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <include layout="@layout/transition_image" />
+
+    <TextView
+        android:id="@+id/film_title"
+        style="@style/PreviewCardItem.Description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/text_margin"
+        android:layout_toEndOf="@+id/folder_image"
+        android:layout_toLeftOf="@+id/favorite_check"
+        android:layout_toRightOf="@+id/folder_image"
+        android:layout_toStartOf="@+id/favorite_check"
+        tools:text="Resident Evil: O Hóspede Maldito" />
+
+    <TextView
+        android:id="@+id/referenceDate"
+        style="@style/PreviewCardItem.SubTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/film_title"
+        android:layout_alignLeft="@+id/film_title"
+        android:layout_alignRight="@+id/film_title"
+        android:layout_alignStart="@+id/film_title"
+        android:layout_below="@id/film_title"
+        tools:text="12, 2017, 120 min" />
+
+    <TextView
+        android:id="@+id/text_ratting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/referenceDate"
+        android:layout_alignStart="@+id/referenceDate"
+        android:layout_below="@id/referenceDate"
+        android:drawableEnd="@drawable/ic_star_black_12dp"
+        android:drawablePadding="@dimen/lower_padding"
+        android:drawableRight="@drawable/ic_star_black_12dp"
+        android:gravity="center"
+        tools:text="4,2" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/button_wishlist"
+        style="@style/AppTheme.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignEnd="@+id/view_separator"
+        android:layout_alignRight="@+id/view_separator"
+        android:layout_below="@+id/text_ratting"
+        android:layout_marginTop="@dimen/medium_padding"
+        android:text="@string/add_wishlist" />
+
+    <View
+        android:id="@+id/view_separator"
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:layout_below="@id/button_wishlist"
+        android:layout_margin="@dimen/medium_padding"
+        android:background="@color/grey_500" />
+
+    <TextView
+        android:id="@+id/film_overview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view_separator"
+        android:layout_margin="16dp"
+        android:text="@string/no_more_data_available" />
+
+    <include layout="@layout/film_details_more_info" />
+</RelativeLayout>

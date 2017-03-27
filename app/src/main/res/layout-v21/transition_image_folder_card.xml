@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:transitionName="@string/folder_transition"
+    android:layout_height="@dimen/folder_height"
+    android:layout_width="match_parent"
+    android:id="@+id/folder"
+    android:layout_gravity="center_horizontal"
+    android:scaleType="fitCenter"
+    android:contentDescription="@string/folder_image_description"
+    tools:showIn="@layout/fragment_film_item" />
