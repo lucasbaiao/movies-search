@@ -14,7 +14,7 @@ import lucasbaiao.com.br.moviessearch.di.module.ApiModule;
 import lucasbaiao.com.br.moviessearch.di.module.ApplicationModule;
 
 public class AppApplication extends Application {
-    
+
     private ApiComponent apiComponent;
     private ApplicationComponent component;
 

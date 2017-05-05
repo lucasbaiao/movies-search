@@ -42,19 +42,19 @@ public class ApiModule {
     }
 
     private void buildEndpoints(Context context) {
-        try {
-            OkHttpClient okHttpClient = new OkHttpClient.Builder()
-                    .connectTimeout(BuildConfig.ConnectTimeout, TimeUnit.SECONDS)
-                    .writeTimeout(BuildConfig.WriteTimeout, TimeUnit.SECONDS)
-                    .readTimeout(BuildConfig.ReadTimeout, TimeUnit.SECONDS)
-                    .hostnameVerifier(getHostnameVerifier())
-                    .sslSocketFactory(getSslContext())
-                    .addInterceptor(new HttpRequestInterceptor())
-                    .build();
-            initRests(okHttpClient, context);
-        } catch (Exception ex) {
-            Log.e(getClass().getSimpleName(), ex.getMessage(), ex);
-        }
+            try {
+                OkHttpClient okHttpClient = new OkHttpClient.Builder()
+                        .connectTimeout(BuildConfig.ConnectTimeout, TimeUnit.SECONDS)
+                        .writeTimeout(BuildConfig.WriteTimeout, TimeUnit.SECONDS)
+                        .readTimeout(BuildConfig.ReadTimeout, TimeUnit.SECONDS)
+                        .hostnameVerifier(getHostnameVerifier())
+                        .sslSocketFactory(getSslContext())
+                        .addInterceptor(new HttpRequestInterceptor())
+                        .build();
+                initRests(okHttpClient, context);
+            } catch (Exception ex) {
+                Log.e(getClass().getSimpleName(), ex.getMessage(), ex);
+            }
     }
 
     private void initRests(OkHttpClient okHttpClient, Context context) {
